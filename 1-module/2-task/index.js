@@ -10,16 +10,30 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  if (name.length > 0 & name.length <= 4 & !(name.includes(' '))) {
-    return true; }
+
+  if (name == null) {
+    return false;
+  } else
+
+  if (name.indexOf(' ') > -1)
+  {
+    return false;
+  } else if
+  (name.length < 4) {
+    return false;
+  } else {
+    return true;
+  }
 }
+
 
 function sayHello() {
   const userName = prompt('Введите ваше имя');
 
   if (isValid(userName)) {
-    print(`Welcome back, ${userName}!`);
+    console.log(`Welcome back, ${userName}!`);
   } else {
-    print('Некорректное имя');
+    console.log('Некорректное имя');
   }
 }
+

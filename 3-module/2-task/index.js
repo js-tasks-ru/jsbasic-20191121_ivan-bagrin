@@ -24,4 +24,3 @@ function getMinMax(string) {
   };
   return obj;
 }
-//console.log(getMinMax(inputData)); // ожидается [-5.8, 73]
